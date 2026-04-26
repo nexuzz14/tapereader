@@ -1,0 +1,109 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#09090b"/>
+
+  <!-- Outer ambient glow rings -->
+  <circle cx="200" cy="200" r="175" stroke="white" stroke-width="0.5" stroke-opacity="0.04"/>
+  <circle cx="200" cy="200" r="155" stroke="white" stroke-width="0.5" stroke-opacity="0.06" stroke-dasharray="4 6"/>
+  <circle cx="200" cy="200" r="135" stroke="white" stroke-width="0.3" stroke-opacity="0.08"/>
+
+  <!-- Radial grid lines (8 spokes) -->
+  <line x1="200" y1="45"  x2="200" y2="65"  stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="314" y1="86"  x2="300" y2="100" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="355" y1="200" x2="335" y2="200" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="314" y1="314" x2="300" y2="300" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="200" y1="355" x2="200" y2="335" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="86"  y1="314" x2="100" y2="300" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="45"  y1="200" x2="65"  y2="200" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+  <line x1="86"  y1="86"  x2="100" y2="100" stroke="white" stroke-width="0.5" stroke-opacity="0.12"/>
+
+  <!-- ═══ ICOSAHEDRON WIREFRAME ═══ -->
+  <!-- Projected icosahedron vertices at ~15° tilt, hand-tuned for visual balance -->
+  <!-- Top vertex -->
+  <!-- Upper ring: A(234,108) B(268,148) C(245,180) D(172,178) E(155,142) -->
+  <!-- Lower ring: F(255,222) G(245,258) H(200,272) I(158,256) J(148,220) -->
+  <!-- Bottom vertex: K(200,300) -->
+
+  <!-- Top cap edges -->
+  <line x1="200" y1="118" x2="238" y2="148" stroke="white" stroke-width="1.2" stroke-opacity="0.7" stroke-linecap="round"/>
+  <line x1="200" y1="118" x2="268" y2="178" stroke="white" stroke-width="1.2" stroke-opacity="0.6" stroke-linecap="round"/>
+  <line x1="200" y1="118" x2="200" y2="185" stroke="white" stroke-width="1.2" stroke-opacity="0.9" stroke-linecap="round"/>
+  <line x1="200" y1="118" x2="132" y2="178" stroke="white" stroke-width="1.2" stroke-opacity="0.55" stroke-linecap="round"/>
+  <line x1="200" y1="118" x2="162" y2="148" stroke="white" stroke-width="1.2" stroke-opacity="0.65" stroke-linecap="round"/>
+
+  <!-- Upper ring edges -->
+  <line x1="238" y1="148" x2="268" y2="178" stroke="white" stroke-width="1" stroke-opacity="0.65" stroke-linecap="round"/>
+  <line x1="268" y1="178" x2="200" y2="185" stroke="white" stroke-width="1" stroke-opacity="0.8" stroke-linecap="round"/>
+  <line x1="200" y1="185" x2="132" y2="178" stroke="white" stroke-width="1" stroke-opacity="0.75" stroke-linecap="round"/>
+  <line x1="132" y1="178" x2="162" y2="148" stroke="white" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
+  <line x1="162" y1="148" x2="238" y2="148" stroke="white" stroke-width="1" stroke-opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Upper → lower cross connections -->
+  <line x1="238" y1="148" x2="258" y2="222" stroke="white" stroke-width="1" stroke-opacity="0.6" stroke-linecap="round"/>
+  <line x1="238" y1="148" x2="200" y2="215" stroke="white" stroke-width="1" stroke-opacity="0.7" stroke-linecap="round"/>
+  <line x1="268" y1="178" x2="258" y2="222" stroke="white" stroke-width="1" stroke-opacity="0.65" stroke-linecap="round"/>
+  <line x1="268" y1="178" x2="245" y2="258" stroke="white" stroke-width="1" stroke-opacity="0.45" stroke-linecap="round"/>
+  <line x1="200" y1="185" x2="245" y2="258" stroke="white" stroke-width="1" stroke-opacity="0.55" stroke-linecap="round"/>
+  <line x1="200" y1="185" x2="155" y2="258" stroke="white" stroke-width="1" stroke-opacity="0.8" stroke-linecap="round"/>
+  <line x1="132" y1="178" x2="155" y2="258" stroke="white" stroke-width="1" stroke-opacity="0.7" stroke-linecap="round"/>
+  <line x1="132" y1="178" x2="142" y2="222" stroke="white" stroke-width="1" stroke-opacity="0.5" stroke-linecap="round"/>
+  <line x1="162" y1="148" x2="142" y2="222" stroke="white" stroke-width="1" stroke-opacity="0.55" stroke-linecap="round"/>
+  <line x1="162" y1="148" x2="200" y2="215" stroke="white" stroke-width="1" stroke-opacity="0.65" stroke-linecap="round"/>
+
+  <!-- Lower ring edges -->
+  <line x1="258" y1="222" x2="245" y2="258" stroke="white" stroke-width="1" stroke-opacity="0.55" stroke-linecap="round"/>
+  <line x1="245" y1="258" x2="200" y2="272" stroke="white" stroke-width="1" stroke-opacity="0.7" stroke-linecap="round"/>
+  <line x1="200" y1="272" x2="155" y2="258" stroke="white" stroke-width="1" stroke-opacity="0.75" stroke-linecap="round"/>
+  <line x1="155" y1="258" x2="142" y2="222" stroke="white" stroke-width="1" stroke-opacity="0.6" stroke-linecap="round"/>
+  <line x1="142" y1="222" x2="200" y2="215" stroke="white" stroke-width="1" stroke-opacity="0.7" stroke-linecap="round"/>
+  <line x1="200" y1="215" x2="258" y2="222" stroke="white" stroke-width="1" stroke-opacity="0.65" stroke-linecap="round"/>
+
+  <!-- Bottom cap edges -->
+  <line x1="200" y1="295" x2="258" y2="222" stroke="white" stroke-width="1.1" stroke-opacity="0.5" stroke-linecap="round"/>
+  <line x1="200" y1="295" x2="245" y2="258" stroke="white" stroke-width="1.1" stroke-opacity="0.6" stroke-linecap="round"/>
+  <line x1="200" y1="295" x2="200" y2="272" stroke="white" stroke-width="1.1" stroke-opacity="0.85" stroke-linecap="round"/>
+  <line x1="200" y1="295" x2="155" y2="258" stroke="white" stroke-width="1.1" stroke-opacity="0.7" stroke-linecap="round"/>
+  <line x1="200" y1="295" x2="142" y2="222" stroke="white" stroke-width="1.1" stroke-opacity="0.5" stroke-linecap="round"/>
+
+  <!-- Vertex dots — depth-shaded -->
+  <circle cx="200" cy="118" r="2.5" fill="white" fill-opacity="0.9"/>
+  <circle cx="238" cy="148" r="2"   fill="white" fill-opacity="0.75"/>
+  <circle cx="268" cy="178" r="2"   fill="white" fill-opacity="0.6"/>
+  <circle cx="200" cy="185" r="2.2" fill="white" fill-opacity="0.85"/>
+  <circle cx="132" cy="178" r="2"   fill="white" fill-opacity="0.55"/>
+  <circle cx="162" cy="148" r="2"   fill="white" fill-opacity="0.65"/>
+  <circle cx="258" cy="222" r="2"   fill="white" fill-opacity="0.6"/>
+  <circle cx="245" cy="258" r="2"   fill="white" fill-opacity="0.55"/>
+  <circle cx="200" cy="272" r="2.2" fill="white" fill-opacity="0.8"/>
+  <circle cx="155" cy="258" r="2"   fill="white" fill-opacity="0.7"/>
+  <circle cx="142" cy="222" r="2"   fill="white" fill-opacity="0.55"/>
+  <circle cx="200" cy="215" r="2"   fill="white" fill-opacity="0.7"/>
+  <circle cx="200" cy="295" r="2.5" fill="white" fill-opacity="0.75"/>
+
+  <!-- Center glow behind sentinel -->
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%"   stop-color="white" stop-opacity="0.07"/>
+    <stop offset="100%" stop-color="white" stop-opacity="0"/>
+  </radialGradient>
+  <circle cx="200" cy="207" r="100" fill="url(#glow)"/>
+
+  <!-- ═══ CANDLESTICK + LIGHTNING LOGO (bottom-right corner brand mark) ═══ -->
+  <g transform="translate(308, 308) scale(2.2)">
+    <!-- Bearish candle -->
+    <line x1="7" y1="2"  x2="7"  y2="6"  stroke="#a1a1aa" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="4" y="6"   width="6" height="10" rx="0.5" fill="#ef4444" fill-opacity="0.9"/>
+    <line x1="7" y1="16" x2="7"  y2="20" stroke="#a1a1aa" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Bullish candle -->
+    <line x1="17" y1="5"  x2="17" y2="9"  stroke="#a1a1aa" stroke-width="1.5" stroke-linecap="round"/>
+    <rect x="14" y="9"   width="6" height="8"  rx="0.5" fill="#34d399" fill-opacity="0.9"/>
+    <line x1="17" y1="17" x2="17" y2="22" stroke="#a1a1aa" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Lightning bolt -->
+    <polyline points="16,2 11,14 15,14 10,26" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+
+  <!-- ═══ WORDMARK ═══ -->
+  <text x="200" y="348" font-family="'Courier New', Courier, monospace" font-size="13" font-weight="700"
+        fill="white" fill-opacity="0.85" text-anchor="middle" letter-spacing="6">TAPEREADER</text>
+  <text x="200" y="364" font-family="'Courier New', Courier, monospace" font-size="7.5"
+        fill="white" fill-opacity="0.3" text-anchor="middle" letter-spacing="3">THE SENTINEL · AI MARKET READER</text>
+</svg>
