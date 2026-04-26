@@ -282,7 +282,7 @@ function Navbar() {
         <TapeReaderLogo />
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com/YOUR_USERNAME/tapereader#readme"
+            href="https://github.com/nexuzz14/tapereader#readme"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-1.5 font-mono text-xs text-zinc-500 hover:text-zinc-200 transition-colors tracking-wider"

@@ -383,7 +383,7 @@ function Navbar() {
 
           {/* Fix #4: Documentation → GitHub README */}
           <a
-            href="https://github.com/YOUR_USERNAME/tapereader#readme"
+            href="https://github.com/nexuzz14/tapereader#readme"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1.5 font-mono text-[11px] text-zinc-500 hover:text-zinc-200 transition-colors tracking-wider"

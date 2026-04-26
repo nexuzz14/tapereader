@@ -23,9 +23,9 @@ Output bukan narasi. Output adalah **data terstruktur siap pakai**:
 
 | | |
 |---|---|
-| **Live App** | [tapereader.vercel.app](https://tapereader.vercel.app) |
-| **Dashboard** | [tapereader.vercel.app/dashboard](https://tapereader.vercel.app/dashboard) |
-
+| **Live App** | [tapereader.vercel.app](https://tapereader-ten.vercel.app/) |
+| **Dashboard** | [tapereader.vercel.app/dashboard](https://tapereader-ten.vercel.app/dashboard) |
+    
 ---
 
 ## Tech Stack
@@ -94,7 +94,7 @@ Dashboard renders result        (Framer Motion animations, dynamic color coding)
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/YOUR_USERNAME/tapereader.git
+git clone https://github.com/nexuzz14/tapereader.git
 cd tapereader
 
 # 2. Install dependencies
