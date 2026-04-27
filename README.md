@@ -1,21 +1,21 @@
 # TapeReader
 
-> **AI-Powered Tape Reading untuk Scalper & Day Trader**  
+> **AI-Powered Tape Reading for Scalpers & Day Traders**  
 > Cut the Noise. Trade the Signal.
 
 ![TapeReader Banner](./public/sentinel-logo.svg)
 
 ---
 
-## Apa itu TapeReader?
+## What is TapeReader?
 
-TapeReader adalah dashboard sentimen kilat yang dirancang khusus untuk **day trader dan scalper** di pasar saham Indonesia. Alih-alih membaca berita panjang secara manual sebelum market buka, pengguna cukup paste teks berita atau prospektus IPO — dan dalam hitungan detik, **The Sentinel** (AI engine berbasis Gemini 2.5 Pro) mengekstrak sinyal aksi langsung.
+TapeReader is a lightning-fast sentiment dashboard specifically designed for day traders and scalpers in the Indonesian stock market. Instead of manually reading long news articles before the market opens, users simply paste the news text or IPO prospectus—and within seconds, The Sentinel (an AI engine powered by Gemini 2.5 Flash) extracts direct action signals..
 
-Output bukan narasi. Output adalah **data terstruktur siap pakai**:
-- `catalyst_score` — Skor 1–100, dari Sangat Bearish ke Sangat Bullish
-- `volatility_risk` — Level risiko: Rendah / Sedang / Tinggi / Ekstrem
-- `key_drivers` — 3 kata kunci penggerak harga utama
-- `action_signal` — Sinyal: Pantau Ketat / Berpotensi Naik / Waspada Koreksi
+The output is not a narrative. The output is **ready-to-use structured data**:
+- `catalyst_score` — Score 1–100, from Very Bearish to Very Bullish
+- `volatility_risk` — Risk level: Low / Medium / High / Extreme
+- `key_drivers` — 3 main price-driving keywords
+- `action_signal` — Signal: Watch Closely / Potential Upside / Correction Risk
 
 ---
 
@@ -30,19 +30,19 @@ Output bukan narasi. Output adalah **data terstruktur siap pakai**:
 
 ## Tech Stack
 
-| Layer | Teknologi |
+| Layer | Technology |
 |---|---|
 | Framework | Next.js 15 (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS |
 | Animation | Framer Motion |
 | Icons | Lucide React |
-| AI Engine | Google Gemini 2.5 Pro via `@google/genai` |
+| AI Engine | Google Gemini 2.5 Flash via `@google/genai` |
 | Deployment | Vercel |
 
 ---
 
-## Arsitektur
+## Architecture
 
 ```
 tapereader/
@@ -57,7 +57,7 @@ tapereader/
 └── README.md
 ```
 
-### Alur Data
+### Data Flow
 
 ```
 User pastes text
@@ -78,17 +78,17 @@ SentimentResponse { catalyst_score, volatility_risk, key_drivers, action_signal 
 Dashboard renders result        (Framer Motion animations, dynamic color coding)
 ```
 
-### Kenapa Server Action?
+### Why Server Action?
 
-`app/actions/gemini.ts` dijalankan di server — artinya `GEMINI_API_KEY` **tidak pernah terekspos ke browser**. Ini pattern Next.js App Router yang aman dan tanpa perlu membuat API route terpisah.
+`app/actions/gemini.ts` runs on the server — meaning `GEMINI_API_KEY` **never exposed to the browser**. This is the secure pattern for Next.js App Router and doesn't require a separate API route.
 
 ---
 
-## Instalasi Lokal
+## Local Installation
 
 ### Prerequisites
 - Node.js ≥ 18
-- Google Gemini API Key ([dapatkan di sini](https://aistudio.google.com/apikey))
+- Google Gemini API Key ([get it here](https://aistudio.google.com/apikey))
 
 ### Steps
 
@@ -102,12 +102,12 @@ npm install
 
 # 3. Setup environment variable
 cp .env.example .env.local
-# Edit .env.local dan isi GEMINI_API_KEY
+# Edit .env.local and fill GEMINI_API_KEY
 
-# 4. Jalankan dev server
+# 4. Run dev server
 npm run dev
 
-# Buka http://localhost:3000
+# Open http://localhost:3000
 ```
 
 ### Environment Variables
@@ -129,46 +129,46 @@ npm install -g vercel
 vercel --prod
 ```
 
-**Penting:** Tambahkan `GEMINI_API_KEY` di **Vercel Dashboard → Settings → Environment Variables** sebelum deploy.
+**Important:** Add `GEMINI_API_KEY` to **Vercel Dashboard → Settings → Environment Variables** before deploying.
 
 ---
 
-## Keputusan Desain
+## Design Decisions
 
 ### Visual Identity — "Industrial Terminal"
 
-TapeReader dirancang dengan aesthetic **monochrome industrial terminal** — sepenuhnya hitam pekat (`#09090b`) dengan aksen emerald hanya pada elemen live/aktif, dan merah/hijau hanya pada sinyal trading.
+TapeReader is designed with a **monochrome industrial terminal** aesthetic — completely solid black (`#09090b`) with emerald accents only on live/active elements, and red/green only on trading signals.
 
-Keputusan ini disengaja: trader tidak butuh UI yang indah, mereka butuh UI yang **tidak menyita atensi** dan membiarkan data berbicara.
+This decision was deliberate: traders don't need a beautiful UI, they need a UI that **doesn't steal attention** and lets the data speak.
 
-| Elemen | Keputusan | Alasan |
+| Element | Decision | Reason |
 |---|---|---|
-| Font | `font-mono` (system) | Konsisten dengan aesthetic terminal, tidak perlu Google Fonts |
-| Background | `#09090b` (zinc-950) | Lebih hitam dari pure black, mengurangi eye strain saat trading malam |
-| Accent warna | Emerald untuk live, merah/kuning/hijau untuk sinyal | Mapping intuitif: hijau = naik, merah = turun |
-| Animasi | Framer Motion, ease `[0.22, 1, 0.36, 1]` | Custom cubic bezier yang terasa "precision instrument" bukan playful |
+| Font | `font-mono` (system) | Consistent with terminal aesthetic, no need for Google Fonts |
+| Background | `#09090b` (zinc-950) | Blacker than pure black, reducing eye strain during night trading |
+| Accent warna | Emerald for live, red/yellow/green for signals | Intuitive mapping: green = up, red = down |
+| Animation | Framer Motion, ease `[0.22, 1, 0.36, 1]` | Custom cubic bezier that feels like "precision instrument" not playful |
 
 ### "The Sentinel" Character
 
-Karakter AI TapeReader divisualisasikan sebagai **wireframe icosahedron** — bukan avatar humanoid. Ini disengaja:
+The Sentinel AI character in TapeReader is visualized as a **wireframe icosahedron** — not a humanoid avatar. This was deliberate:
 
-- Icosahedron adalah bentuk geometris yang sempurna — melambangkan kalkulasi murni tanpa bias
-- Wireframe tanpa fill = AI yang "melihat tembus" ke dalam data
-- Rotasi 3D infinite = "selalu mengawasi pasar"
-- Tidak ada wajah = tidak ada emosi, tidak ada opini — hanya sinyal
+- Icosahedron is a perfect geometric shape — symbolizing pure calculation without bias
+- Wireframe without fill = AI that "sees through" the data
+- Infinite 3D rotation = "always watching the market"
+- No face = no emotion, no opinion — only signals
 
-### AI Integration — Bukan Chatbot
+### AI Integration — Not a Chatbot
 
-Perbedaan utama TapeReader dari aplikasi AI generik: **output-nya adalah structured JSON**, bukan teks bebas. Gemini dipaksa menggunakan `responseMimeType: "application/json"` sehingga response selalu machine-parseable. Tidak ada hallucination format, tidak ada preamble.
+The main difference between TapeReader and generic AI applications: **its output is structured JSON**, not free text. Gemini is forced to use `responseMimeType: "application/json"` so the response is always machine-parseable. No hallucination format, no preamble.
 
 ---
 
-## Validasi & Safety
+## Validation & Safety
 
 ```typescript
 // app/actions/gemini.ts
 const trimmed = text.trim();
-if (!trimmed) throw new Error("Input tidak boleh kosong");
+if (!trimmed) throw new Error("Input cannot be empty");
 const safeText = trimmed.substring(0, 5000);  // Token limit guard
 
 // Post-parse validation
@@ -180,7 +180,7 @@ parsed.key_drivers = parsed.key_drivers.slice(0, 3);
 
 ## Disclaimer
 
-> TapeReader adalah tool bantu analisis sentimen berbasis AI. Output bukan rekomendasi investasi. Selalu lakukan riset mandiri sebelum mengambil keputusan trading.
+> TapeReader is an AI-powered sentiment analysis tool. Output is not investment advice. Always conduct independent research before making trading decisions.
 
 ---
 

@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "TapeReader | Day Trader Sentiment Engine",
-  description: "TapeReader adalah dashboard sentimen kilat yang dirancang khusus untuk day trader dan scalper di pasar saham Indonesia.",
+  description: "TapeReader is a lightning-fast sentiment dashboard designed specifically for day traders and scalpers in the Indonesian stock market.",
 };
 
 export default function RootLayout({

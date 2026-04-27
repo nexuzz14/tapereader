@@ -17,7 +17,7 @@ import {
 import { analyzeSentiment, type SentimentResponse } from "../actions/gemini";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SHARED LOGO — identik dengan Landing Page (Fix #1)
+// SHARED LOGO — identical to Landing Page for brand consistency
 // ─────────────────────────────────────────────────────────────────────────────
 
 function TapeReaderLogo() {
@@ -74,7 +74,7 @@ function Scanlines() {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// SENTINEL STANDBY — versi mini untuk panel kanan saat idle (Fix #2)
+// SENTINEL STANDBY — mini version for right panel while idle
 // ─────────────────────────────────────────────────────────────────────────────
 
 function icosaVertices(): [number, number, number][] {
@@ -186,13 +186,13 @@ function SentinelStandby() {
           Sentinel is on standby...
         </motion.p>
         <p className="font-mono text-[10px] text-zinc-700 tracking-wider">
-          Menunggu input data pasar
+          Awaiting market data input
         </p>
       </div>
 
       {/* Fake ticker animation */}
       <div className="w-48 space-y-1.5 opacity-30">
-        {["BBRI", "TLKM", "ASII", "GOTO"].map((ticker, i) => (
+        {["AAPL", "TSLA", "NVDA", "MSFT"].map((ticker, i) => (
           <motion.div
             key={ticker}
             className="flex items-center justify-between font-mono text-[9px] text-zinc-600"
@@ -230,21 +230,21 @@ function getScoreBorder(s: number) {
 }
 function getVolatilityColor(risk: string) {
   const map: Record<string, string> = {
-    Rendah: "text-emerald-400 bg-emerald-950/60 border-emerald-800/50",
-    Sedang: "text-yellow-400 bg-yellow-950/60 border-yellow-800/50",
-    Tinggi: "text-orange-400 bg-orange-950/60 border-orange-800/50",
-    Ekstrem: "text-red-400 bg-red-950/60 border-red-800/50",
+    Low: "text-emerald-400 bg-emerald-950/60 border-emerald-800/50",
+    Moderate: "text-yellow-400 bg-yellow-950/60 border-yellow-800/50",
+    High: "text-orange-400 bg-orange-950/60 border-orange-800/50",
+    Extreme: "text-red-400 bg-red-950/60 border-red-800/50",
   };
   return map[risk] ?? "text-zinc-400 bg-zinc-900 border-zinc-700";
 }
 function getSignalIcon(signal: string) {
-  if (signal === "Berpotensi Naik") return <TrendingUp className="w-4 h-4 text-emerald-400" />;
-  if (signal === "Waspada Koreksi") return <TrendingDown className="w-4 h-4 text-red-500" />;
+  if (signal === "Potential Upside") return <TrendingUp className="w-4 h-4 text-emerald-400" />;
+  if (signal === "Correction Risk") return <TrendingDown className="w-4 h-4 text-red-500" />;
   return <Eye className="w-4 h-4 text-yellow-400" />;
 }
 function getSignalStyle(signal: string) {
-  if (signal === "Berpotensi Naik") return "text-emerald-400 border-emerald-700/50 bg-emerald-950/40";
-  if (signal === "Waspada Koreksi") return "text-red-400 border-red-700/50 bg-red-950/40";
+  if (signal === "Potential Upside") return "text-emerald-400 border-emerald-700/50 bg-emerald-950/40";
+  if (signal === "Correction Risk") return "text-red-400 border-red-700/50 bg-red-950/40";
   return "text-yellow-400 border-yellow-700/50 bg-yellow-950/40";
 }
 
@@ -350,14 +350,14 @@ function ResultPanel({ result }: { result: SentimentResponse }) {
 
       {/* Disclaimer */}
       <p className="font-mono text-[9px] text-zinc-700 leading-relaxed">
-        ⚠ Hasil analisis AI bukan rekomendasi investasi. Selalu lakukan riset mandiri.
+        ⚠ AI analysis results are not investment advice. Always conduct your own research.
       </p>
     </motion.div>
   );
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// NAVBAR 
+// NAVBAR (Fix #1: logo sama, Fix #3: label Pro, Fix #4: link GitHub)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function Navbar() {
@@ -427,7 +427,7 @@ export default function DashboardPage() {
       const data = await analyzeSentiment(text);
       setResult(data);
     } catch (err: unknown) {
-      setError(err instanceof Error ? err.message : "Terjadi kesalahan tidak terduga.");
+      setError(err instanceof Error ? err.message : "An unexpected error occurred.");
     } finally {
       setLoading(false);
     }
@@ -464,7 +464,7 @@ export default function DashboardPage() {
                 Sentiment Analyzer
               </h1>
               <p className="font-mono text-[11px] text-zinc-500 mt-0.5">
-                Paste berita atau prospektus IPO · The Sentinel akan membaca seketika
+                Paste news or IPO prospectus text · The Sentinel reads it instantly
               </p>
             </div>
 
@@ -474,7 +474,7 @@ export default function DashboardPage() {
                 <textarea
                   value={text}
                   onChange={(e) => setText(e.target.value)}
-                  placeholder={`Paste teks di sini...\n\nContoh:\n"PT XYZ Tbk mencatat laba bersih Rp 2,4 triliun pada Q3 2024, naik 38% YoY didorong ekspansi segmen digital..."`}
+                  placeholder={`Paste your text here...\n\nExample:\n"XYZ Corp reported net income of $2.4B in Q3 2024, up 38% YoY driven by digital segment expansion..."`}
                   disabled={loading}
                   className="w-full h-full min-h-[280px] lg:min-h-0 rounded-xl border border-zinc-800 bg-zinc-900/70 px-4 py-3.5 font-mono text-[13px] text-zinc-200 placeholder-zinc-700 resize-none focus:outline-none focus:border-zinc-600 focus:ring-1 focus:ring-zinc-700/50 transition-colors duration-200 leading-relaxed"
                 />
@@ -569,7 +569,7 @@ export default function DashboardPage() {
 
         </div>
 
-        {/* Footer — Fix #3: label Gemini Flash */}
+        {/* Footer — Fix #3: label Gemini Pro */}
         <footer className="border-t border-zinc-900 py-3 px-8">
           <div className="flex items-center justify-between font-mono text-[9px] text-zinc-800">
             <span>TAPEREADER · Day Trader Sentiment Engine</span>

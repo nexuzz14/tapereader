@@ -282,7 +282,7 @@ function Navbar() {
         <TapeReaderLogo />
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com/nexuzz14/tapereader#readme"
+            href="https://github.com/YOUR_USERNAME/tapereader#readme"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:flex items-center gap-1.5 font-mono text-xs text-zinc-500 hover:text-zinc-200 transition-colors tracking-wider"
@@ -365,8 +365,8 @@ function HeroSection() {
             transition={{ duration: 0.65, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
             className="font-mono text-sm text-zinc-400 leading-relaxed max-w-md"
           >
-            AI-Powered Tape Reading untuk Scalper & Day Trader. Ekstrak sentimen
-            dan katalis langsung dari prospektus dalam hitungan detik.
+            AI-Powered Tape Reading for Scalpers & Day Traders. Extract sentiment
+            and catalysts directly from news or IPO prospectuses in seconds.
           </motion.p>
 
           {/* CTA row */}
@@ -446,7 +446,7 @@ const FEATURES = [
     icon: Zap,
     title: "Instant Sentiment",
     tag: "01",
-    desc: "Bukan narasi, bukan opini. Hanya sinyal aksi langsung: Pantau, Naik, atau Koreksi — diproses dalam satu pemindaian AI.",
+    desc: "No narratives, no opinions. Just direct action signals: Monitor, Rising, or Correction — processed in a single AI scan.",
     accent: "text-yellow-400",
     border: "hover:border-yellow-800/50",
   },
@@ -454,7 +454,7 @@ const FEATURES = [
     icon: Activity,
     title: "Catalyst Extraction",
     tag: "02",
-    desc: "TapeReader menemukan kata kunci penggerak harga dari teks mentah — dari guidance laba hingga kata-kata terlarang di prospektus.",
+    desc: "TapeReader finds the key price-moving drivers from raw text — from earnings guidance to red-flag words buried in prospectuses.",
     accent: "text-emerald-400",
     border: "hover:border-emerald-800/50",
   },
@@ -462,7 +462,7 @@ const FEATURES = [
     icon: ShieldAlert,
     title: "Volatility Risk",
     tag: "03",
-    desc: "Mitigasi risiko sebelum pasar buka. Skor Rendah–Ekstrem memperingatkan Anda sebelum harga bergerak terlalu liar.",
+    desc: "Mitigate risk before the market opens. A Low–Extreme score warns you before price moves too wildly.",
     accent: "text-red-400",
     border: "hover:border-red-800/50",
   },
@@ -477,7 +477,7 @@ function FeaturesSection() {
             Core Modules
           </p>
           <h2 className="font-mono font-black text-2xl sm:text-3xl text-white tracking-tight">
-            Tiga Sinyal. Satu Keputusan.
+            Three Signals. One Decision.
           </h2>
         </FadeIn>
 
@@ -546,9 +546,9 @@ function CTASection() {
             Ready to Deploy
           </p>
           <h2 className="font-mono font-black text-3xl sm:text-4xl xl:text-5xl text-white leading-tight tracking-tight">
-            Siap mengalahkan
+            Ready to beat
             <br />
-            <span className="text-zinc-500">pasar hari ini?</span>
+            <span className="text-zinc-500">the market today?</span>
           </h2>
         </FadeIn>
 
